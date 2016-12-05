@@ -1,0 +1,25 @@
+{
+  "name": "Ratebeer Loves Alko",
+  "manifest_version": 2,
+  "version": "2.12",
+  "description": "Ratebeerin arviot alkon sivulle. Sovellus on Beta-vaihessa, joten kaikki oluet ei varmasti vielä löydy.",
+  "permissions": ["tabs", "*://*.ratebeer.com/*"],
+  "web_accessible_resources": [
+    "images/rblogo.png"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.alko.fi/tuotteet/*",
+        "http://*.systembolaget.se/dryck/ol/*",
+        "https://*.systembolaget.se/dryck/ol/*",
+        "http://*.alko.fi/tuotteet/*"
+      ],
+      "js": [
+        "js/jquery.js",
+        "js/script.js"
+
+      ]
+    }
+  ]
+}
